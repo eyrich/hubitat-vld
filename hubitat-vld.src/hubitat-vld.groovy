@@ -1,10 +1,18 @@
 /**
- * 	hubitat-vld based off ERS vacation-light-director  (based off of tslagle's original) modified to work on Hubitat
- * 	this version James Eyrich
- * 	Source:
+ *	hubitat port of ERS vacation-light-director
+ *	
+ *	by James Eyrich
+  *	Source: https://github.com/eyrich/hubitat-vld/edit/master/hubitat-vld.src/hubitat-vld.groovy
+ *	
+ *	Original:
+ *	Vacation Lighting Director  (based off of tslagle's original)
+ *	Supports Longer interval times (up to 180 mins)
+ *	Only turns off lights it turned on (vs calling to turn all off)
  * 
- * 	ERS: Source code can be found here:
- *  	https://github.com/imnotbob/vacation-lighting-director/blob/master/smartapps/imnotbob/vacation-lighting-director.src/vacation-lighting-director.groovy
+ *      Updated to turn on a set of lights during active time, and turn them off at end of vacation time
+ *
+ *	Source code can be found here:
+ *  https://github.com/imnotbob/vacation-lighting-director/blob/master/smartapps/imnotbob/vacation-lighting-director.src/vacation-lighting-director.groovy
  *
  *	Copyright 2017 Eric Schott
  *
@@ -23,9 +31,9 @@ import java.text.SimpleDateFormat
 
 // Automatically generated. Make future change here.
 definition(
-	name: "hubitat-vld",
-	namespace: "eyrich",
-	author: "JFE",
+	name: "Vacation Lighting Director",
+	namespace: "imnotbob",
+	author: "ERS",
 	category: "Safety & Security",
 	description: "Randomly turn on/off lights to simulate the appearance of a occupied home while you are away.",
 	iconUrl: "http://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/settings-icon.png",
@@ -510,6 +518,7 @@ private getTimeOk() {
 
 // from here https://community.hubitat.com/t/rooms-manager-smarter-rooms-personalized-home-automation-with-occupancy/1506/496
 def sunriseAndSunset = getSunriseAndSunset()
+
 if (!sunriseAndSunset.sunrise || !sunriseAndSunset.sunset)	{
 	ifDebug("Please set location for the hub for rules to be processed.", "error")
 	return false
