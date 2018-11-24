@@ -1,10 +1,10 @@
 /**
- *	hubitat-vld based off ERS vacation-light-director  (based off of tslagle's original) modified to work on Hubitat
- *	this version James Eyrich
- *	Source:
- *
- *	ERS: Source code can be found here:
- *  https://github.com/imnotbob/vacation-lighting-director/blob/master/smartapps/imnotbob/vacation-lighting-director.src/vacation-lighting-director.groovy
+ * 	hubitat-vld based off ERS vacation-light-director  (based off of tslagle's original) modified to work on Hubitat
+ * 	this version James Eyrich
+ * 	Source:
+ * 
+ * 	ERS: Source code can be found here:
+ *  	https://github.com/imnotbob/vacation-lighting-director/blob/master/smartapps/imnotbob/vacation-lighting-director.src/vacation-lighting-director.groovy
  *
  *	Copyright 2017 Eric Schott
  *
@@ -23,9 +23,9 @@ import java.text.SimpleDateFormat
 
 // Automatically generated. Make future change here.
 definition(
-	name: "Vacation Lighting Director",
-	namespace: "imnotbob",
-	author: "ERS",
+	name: "hubitat-vld",
+	namespace: "eyrich",
+	author: "JFE",
 	category: "Safety & Security",
 	description: "Randomly turn on/off lights to simulate the appearance of a occupied home while you are away.",
 	iconUrl: "http://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/settings-icon.png",
@@ -513,6 +513,7 @@ def sunriseAndSunset = getSunriseAndSunset()
 if (!sunriseAndSunset.sunrise || !sunriseAndSunset.sunset)	{
 	ifDebug("Please set location for the hub for rules to be processed.", "error")
 	return false
+}
 
 private timeWindowStart(usehhmm=false) {
 	def result = null
