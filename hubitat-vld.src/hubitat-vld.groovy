@@ -1,7 +1,8 @@
 /**
- *hubitat-vld based off ERS vacation-light-director  (based off of tslagle's original) modified to work on Hubitat
+ * hubitat-vld based off ERS vacation-light-director  (based off of tslagle's original) modified to work on Hubitat
  * this version James Eyrich
- *Source:
+ * Source:
+ * https://github.com/eyrich/hubitat-vld/blob/master/hubitat-vld.src/hubitat-vld.groovyrc
  *
  *	ERS: Source code can be found here:
  *  https://github.com/imnotbob/vacation-lighting-director/blob/master/smartapps/imnotbob/vacation-lighting-director.src/vacation-lighting-director.groovy
