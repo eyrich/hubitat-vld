@@ -31,9 +31,9 @@ import java.text.SimpleDateFormat
 
 // Automatically generated. Make future change here.
 definition(
-	name: "Vacation Lighting Director",
-	namespace: "imnotbob",
-	author: "ERS",
+	name: "hubitat-VLD",
+	namespace: "eyrich",
+	author: "JFE",
 	category: "Safety & Security",
 	description: "Randomly turn on/off lights to simulate the appearance of a occupied home while you are away.",
 	iconUrl: "http://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/settings-icon.png",
