@@ -1,10 +1,5 @@
 # hubitat-vld
-Hubitat port of vacation light director from ERS
-
-# vacation-lighting-director
-ERS update to tslagle's vacation-lighting-director
-
-https://community.smartthings.com/t/new-app-vacation-light-director/7230/265
+Hubitat port of vacation light director from ERS's update to tslagle's
 
 Inputs:
 
@@ -40,5 +35,4 @@ Example:
          * if all are true, turn on 2 randomly selected switches from the list; turn on *lights* list
          * in 33 mins;   select 2 randomly selected lights from list, turn off old selection and on new selection;  *lights* remain on
          * if time expires, or ST mode changes;  turn off all lights we have on (2 + *lights*)
-         
          * if Bob or Jane arrive while active;  stop processing, but leave lights on that are on (we don't want them to come in and have the lights go out)
