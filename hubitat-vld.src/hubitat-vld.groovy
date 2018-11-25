@@ -2,7 +2,7 @@
  *	hubitat port of ERS vacation-light-director
  *	
  *	by James Eyrich
-  *	Source: https://github.com/eyrich/hubitat-vld/edit/master/hubitat-vld.src/hubitat-vld.groovy
+ *	Source: https://github.com/eyrich/hubitat-vld/edit/master/hubitat-vld.src/hubitat-vld.groovy
  *	
  *	Original:
  *	Vacation Lighting Director  (based off of tslagle's original)
